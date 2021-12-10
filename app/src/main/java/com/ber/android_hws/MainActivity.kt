@@ -3,18 +3,16 @@ package com.ber.android_hws
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 
 class MainActivity : AppCompatActivity(), OnButtonClicked {
-    private var mImageView: ImageView? = null
-    private val mImageAddress = "https://www.pinterest.com/pin/422281206417660/"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         initFragments()
-        mImageView = findViewById(R.id.img);
+
     }
     private fun initFragments() {
         val fragment1 = supportFragmentManager.beginTransaction()
@@ -24,8 +22,11 @@ class MainActivity : AppCompatActivity(), OnButtonClicked {
             .add(R.id.fragment_container2, Fragment2())
             .commit()
     }
-    fun onClick() {
-        ///
+
+    override fun onClick(buttonIndex: Int) {
+        val fragment2 = supportFragmentManager.findFragmentById(R.id.fragment_container2) as Fragment2?
+        fragment2.setImage(buttonIndex)
     }
+
 }
 

@@ -19,19 +19,17 @@ class Fragment1: Fragment(R.layout.fragment_1) {
         val btn1 = view.findViewById<AppCompatButton>(R.id.btn_1)
         val btn2 = view.findViewById<AppCompatButton>(R.id.btn_2)
         val btn3 = view.findViewById<AppCompatButton>(R.id.btn_3)
-
+    }
+    private fun translateIdToIndex(id:Int): Int {
         var index = -1
         when (id) {
             R.id.btn_1 -> index = 1
             R.id.btn_2 -> index = 2
             R.id.btn_3 -> index = 3
-
         }
-        btn2.setOnClickListener {
-            listener.onClick(1)
-        }
-        btn3.setOnClickListener {
-
-        }
+        return index
+    }
+    fun onClick(v: View?) {
+        val  buttonIndex = translateIdToIndex(v!!.id)
     }
 }

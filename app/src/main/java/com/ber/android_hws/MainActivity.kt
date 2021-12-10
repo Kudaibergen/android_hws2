@@ -11,10 +11,10 @@ class MainActivity : AppCompatActivity() {
         initFragments()
     }
     private fun initFragments() {
-        supportFragmentManager.beginTransaction()
+        val fragment1 = supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container1, Fragment1())
             .commit()
-        supportFragmentManager.beginTransaction()
+        val fragment2 = supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container2, Fragment2())
             .commit()
     }

@@ -9,7 +9,7 @@
         android:id="@+id/txt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TEXT Fragment2"
+        android:text="This is Fragment 2 with ImageView"
         android:layout_margin="16dp"
         android:background="#FFEB3B"
         android:textSize="24sp"
@@ -18,4 +18,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/img"
+        app:layout_constraintTop_toBottomOf="@id/txt2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

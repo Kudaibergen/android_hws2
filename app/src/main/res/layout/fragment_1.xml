@@ -5,6 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#801A1A">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is Fragment1 "
+        android:layout_margin="16dp"
+        android:textSize="24sp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_1" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_1"
         android:layout_width="wrap_content"
@@ -13,9 +27,8 @@
         android:layout_margin="16dp"
         android:textSize="24sp"
         android:textColor="@color/black"
-        app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btn_2" />
 
@@ -30,20 +43,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_1"
-        app:layout_constraintBottom_toTopOf="@id/txt" />
+        app:layout_constraintBottom_toTopOf="@id/btn_3" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_3"
+        android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TEXT"
-        android:layout_margin="16dp"
-        android:background="@color/purple_500"
+        android:text="Button3"
         android:textSize="24sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_2"
+        app:layout_constraintTop_toBottomOf="@+id/btn_2"
         app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

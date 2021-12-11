@@ -14,11 +14,11 @@ class Fragment2: Fragment(R.layout.fragment_2) {
         changingImageView = view.findViewById(R.id.img)
 
         }
-    private fun setImage(buttonIndex: Int) {
+    fun setImage(buttonIndex: Int) {
         when (buttonIndex) {
-            1 -> changingImageView.setImageResource(R.drawable.cat1)
-            2 -> changingImageView.setImageResource(R.drawable.cat2)
-            3 -> changingImageView.setImageResource(R.drawable.cat3)
+            1 -> changingImageView.setImageResource(R.drawable.ic_launcher_foreground)
+            2 -> changingImageView.setImageResource(R.drawable.ic_launcher_background)
+            3 -> changingImageView.setImageResource(R.drawable.ic_launcher_foreground)
             else -> {
             }
         }

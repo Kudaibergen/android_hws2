@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), OnButtonClicked {
 
     override fun onClick(buttonIndex: Int) {
         val fragment2 = supportFragmentManager.findFragmentById(R.id.fragment_container2) as Fragment2?
-        fragment2.setImage(buttonIndex)
+        fragment2?.setImage(buttonIndex)
     }
 
 }

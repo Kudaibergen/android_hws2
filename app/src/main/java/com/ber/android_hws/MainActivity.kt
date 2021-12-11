@@ -7,26 +7,20 @@ import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 
-class MainActivity : AppCompatActivity(), OnButtonClicked {
+class MainActivity : AppCompatActivity(), OnClickListener, OnClickListener2 {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initFragments()
-
-    }
-    private fun initFragments() {
-        val fragment1 = supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container1, Fragment1())
-            .commit()
-        val fragment2 = supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container2, Fragment2())
-            .commit()
     }
 
-    override fun onClick(buttonIndex: Int) {
-        val fragment2 = supportFragmentManager.findFragmentById(R.id.fragment_container2) as Fragment2?
-        fragment2.setImage(buttonIndex)
+    override fun onClicked(text: String) {
+        val fragment1 = supportFragmentManager.findFragmentById(R.id.fragment_container1) as? Fragment1
+        fragment1?.setText(text)
     }
 
+    override fun onClick2(text2: String) {
+        val fragment2 = supportFragmentManager.findFragmentById(R.id.fragment_container2) as? Fragment2
+        fragment2?.setText2(text2)
+    }
 }
 

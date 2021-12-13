@@ -11,12 +11,12 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.fragment.app.Fragment
 
 class Fragment2: Fragment(R.layout.fragment_2) {
-    private lateinit var listener: OnClickListener2
+    private lateinit var listener: OnButtonClicked
     private lateinit var text2: AppCompatTextView
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        listener = context as OnClickListener2
+        listener = context as OnButtonClicked
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,10 +25,10 @@ class Fragment2: Fragment(R.layout.fragment_2) {
         val btn2 = view.findViewById<AppCompatButton>(R.id.btn_2)
         btn2.setOnClickListener {
            val editText2 = edit2.text
-            listener.onClick2(editText2.toString())
+            listener.setText1(editText2.toString())
         }
     }
-    fun setText2(value: String) {
+    fun setText1(value: String) {
         text2.text = value
     }
 }

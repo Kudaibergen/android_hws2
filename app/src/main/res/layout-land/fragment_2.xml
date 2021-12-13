@@ -3,13 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#673AB7">
+    android:background="#801A1A">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_1"
+        android:id="@+id/txt_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is Fragment1 "
+        android:text="This is Fragment2 "
         android:layout_margin="16dp"
         android:textSize="24sp"
         app:layout_constraintVertical_chainStyle="packed"
@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toTopOf="@id/edit_1" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/edit_1"
+        android:id="@+id/edit_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="enter text"
@@ -28,21 +28,21 @@
         android:textSize="24sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_1"
+        app:layout_constraintTop_toBottomOf="@id/txt_2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn_1" />
+        app:layout_constraintBottom_toTopOf="@id/btn_2" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_1"
+        android:id="@+id/btn_2"
         android:layout_margin="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="send text to F2"
+        android:text="send text to F1"
         android:textSize="24sp"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_1"
+        app:layout_constraintTop_toBottomOf="@id/edit_2"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-   </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

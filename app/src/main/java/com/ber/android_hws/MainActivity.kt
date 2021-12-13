@@ -9,14 +9,26 @@ class MainActivity : AppCompatActivity(), Navigator  {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val fragment1 = supportFragmentManager.beginTransaction()
+        supportFragmentManager.beginTransaction()
             .add(R.id.fragment_container, Fragment1())
             .commit()
     }
 
     override fun showMainFragment() {
         supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container, Fragment1())
+            .replace(R.id.fragment_container, Fragment1())
+            .commit()
+    }
+
+    override fun showRegisterPage() {
+         supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, Fragment3())
+            .commit()
+    }
+
+    override fun showSignInPage() {
+         supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, Fragment2())
             .commit()
     }
 }

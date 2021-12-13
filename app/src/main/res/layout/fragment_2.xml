@@ -13,17 +13,17 @@
         android:layout_margin="16dp"
         android:background="#FFEB3B"
         android:textSize="24sp"
+        app:layout_constraintVertical_chainStyle="packed"
         android:textColor="@color/black"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/img"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/img"
-        android:scaleType="center"
         app:layout_constraintTop_toBottomOf="@id/txt2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

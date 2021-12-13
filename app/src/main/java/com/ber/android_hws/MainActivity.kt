@@ -11,22 +11,16 @@ class MainActivity : AppCompatActivity(), OnButtonClicked {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initFragments()
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fragment_container1,Fragment1()).commit()
 
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fragment_container2,Fragment2()).commit()
     }
-    private fun initFragments() {
-        val fragment1 = supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container1, Fragment1())
-            .commit()
-        val fragment2 = supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container2, Fragment2())
-            .commit()
+    override fun setImage(image: Int) {
+        val fragment2 = supportFragmentManager
+            .findFragmentById(R.id.fragment_container2) as? Fragment2
+        fragment2?.getImage(image)
     }
-
-    override fun onClick(buttonIndex: Int) {
-        val fragment2 = supportFragmentManager.findFragmentById(R.id.fragment_container2) as Fragment2?
-        fragment2?.setImage(buttonIndex)
-    }
-
 }
 

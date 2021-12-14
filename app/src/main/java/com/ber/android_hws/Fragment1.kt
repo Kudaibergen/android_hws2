@@ -23,7 +23,7 @@ class Fragment1: Fragment(R.layout.fragment_1) {
         val login = "bembakyt@gmail.com"
         val password = "Memento"
         val btnSignIn = view.findViewById<AppCompatButton>(R.id.btn_sign_in)
-        btnSignIn.setOnClickListener {
+        btnSignIn.setOnClickListener { // только еще нужна проверка на не пустой ввод
             if (login == editMail.text.toString() && password == editPassword.text.toString()) {
                 listener.showMainFragment()
             } else {

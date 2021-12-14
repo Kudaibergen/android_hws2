@@ -14,21 +14,16 @@ class MainActivity : AppCompatActivity(), Navigator  {
             .commit()
     }
 
+
     override fun showMainFragment() {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, Fragment1())
-            .commit()
-    }
-
-    override fun showRegisterPage() {
-         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, Fragment3())
+            .replace(R.id.fragment_container, Fragment2())
             .commit()
     }
 
     override fun showSignInPage() {
          supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, Fragment2())
+            .replace(R.id.fragment_container, Fragment1())
             .commit()
     }
 }

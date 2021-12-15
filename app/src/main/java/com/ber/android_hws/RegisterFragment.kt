@@ -8,7 +8,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.fragment.app.Fragment
 
-class Fragment1: Fragment(R.layout.fragment_1) {
+class RegisterFragment: Fragment(R.layout.fragment_register) {
     private lateinit var listener: Navigator
 
     override fun onAttach(context: Context) {

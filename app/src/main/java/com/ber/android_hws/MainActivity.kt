@@ -2,7 +2,6 @@ package com.ber.android_hws
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity(), Navigator  {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,20 +9,26 @@ class MainActivity : AppCompatActivity(), Navigator  {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_container, Fragment1())
+            .add(R.id.fragment_container, RegisterFragment())
             .commit()
     }
 
 
     override fun showMainFragment() {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, Fragment2())
+            .replace(R.id.fragment_container, MainFragment())
             .commit()
     }
 
     override fun showSignInPage() {
          supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, Fragment1())
+            .replace(R.id.fragment_container, RegisterFragment())
+            .commit()
+    }
+
+    override fun showProfileFragment() {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, ProfileFragment())
             .commit()
     }
 }

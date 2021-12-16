@@ -19,17 +19,5 @@ class MainActivity : AppCompatActivity(), Navigator  {
             .replace(R.id.fragment_container, MainFragment())
             .commit()
     }
-
-    override fun showSignInPage() {
-         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, RegisterFragment())
-            .commit()
-    }
-
-    override fun showProfileFragment() {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, ProfileFragment())
-            .commit()
-    }
 }
 

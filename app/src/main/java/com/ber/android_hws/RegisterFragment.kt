@@ -20,8 +20,8 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
         val editMail = view.findViewById<AppCompatEditText>(R.id.edit_mail)
         val editPassword = view.findViewById<AppCompatEditText>(R.id.edit_password)
 
-        val login = "bembakyt@gmail.com"
-        val password = "Memento"
+        val login = "1"
+        val password = "2"
         val btnSignIn = view.findViewById<AppCompatButton>(R.id.btn_sign_in)
         btnSignIn.setOnClickListener {
             if (login == editMail.text.toString() && password == editPassword.text.toString()) {

@@ -7,7 +7,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_main"
         android:background="@color/purple_500"
         app:title="Main Fragment"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"

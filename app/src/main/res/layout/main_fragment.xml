@@ -10,7 +10,7 @@
         android:id="@+id/toolbar_main"
         android:background="@color/purple_500"
         app:title="Main Fragment"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView

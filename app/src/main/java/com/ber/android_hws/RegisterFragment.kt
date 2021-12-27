@@ -27,6 +27,7 @@ class RegisterFragment: Fragment(R.layout.fragment_register) {
             if (login == editMail.text.toString() && password == editPassword.text.toString()) {
                 listener.showMainFragment()
             } else {
+                // ошибку не через Тоаст показываем
                 Toast.makeText(requireContext(), "Error: Incorrect login and password", Toast.LENGTH_SHORT).show()
             }
         }
